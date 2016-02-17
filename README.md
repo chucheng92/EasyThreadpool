@@ -1,2 +1,2 @@
 # simple-threadpool
-简单线程池实现
+Java实现的简单线程池
