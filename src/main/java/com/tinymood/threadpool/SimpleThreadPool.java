@@ -12,7 +12,7 @@ public class SimpleThreadPool implements ThreadPool {
 	// 任务队列
 	private final BlockingQueue<Runnable> taskQueue = new LinkedBlockingQueue<Runnable>();
 	
-	// 工作线程
+	// 线程类Worker，抓取任务并执行任务
 	private final List<Worker> workers = new ArrayList<Worker>(DEFAULT_POOL_SIZE);
 	
 	private final ThreadFactory threadFactory = new SimpleThreadFactory();
