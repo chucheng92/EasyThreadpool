@@ -45,6 +45,10 @@ public class SimpleThreadPool implements ThreadPool {
 		for (Worker worker : workers) {
 			worker.shutdown();
 		}
+		System.out.println("=====");
+//		for (Worker worker : workers) {
+//			System.out.println(worker.running);
+//		}
 	}
 	
 	class Worker implements Runnable {
@@ -53,6 +57,7 @@ public class SimpleThreadPool implements ThreadPool {
 		@Override
 		public void run() {
 			while (running) {
+				System.out.println(running);
 				Runnable task = null;
 				try {
 					task = taskQueue.take();
